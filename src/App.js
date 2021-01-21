@@ -12,18 +12,14 @@ const Orders = React.lazy(() => import('./containers/Orders/Orders'));
 const Auth = React.lazy(() => import('./containers/Auth/Auth'));
 
 const App = (props) => {
+  const { onTryAutoSignup } = props;
   useEffect(() => {
-    props.onTryAutoSignup();
-  }, []);
+    onTryAutoSignup();
+  }, [onTryAutoSignup]);
 
   let routes = (
     <Switch>
-      <Route
-        path="/auth"
-        render={(props) => {
-          <Auth {...props} />;
-        }}
-      />
+      <Route path="/auth" render={(props) => <Auth />} />
       <Route path="/" exact component={BurgerBuilder} />
       <Redirect to="/" />
     </Switch>
@@ -34,7 +30,7 @@ const App = (props) => {
         <Route path="/checkout" render={(props) => <Checkout {...props} />} />
         <Route path="/orders" render={(props) => <Orders {...props} />} />
         <Route path="/logout" component={Logout} />
-        <Route path="/auth" render={(props) => <Auth {...props} />} />
+        <Route path="/auth" render={(props) => <Auth />} />
         <Route path="/" exact component={BurgerBuilder} />
         <Redirect to="/" />
       </Switch>
@@ -43,7 +39,7 @@ const App = (props) => {
   return (
     <div>
       <Layout>
-        <Suspense fallback={<p>Loading...</p>}>{routes}</Suspense>
+        <Suspense fallback={<p>loading...</p>}>{routes}</Suspense>
       </Layout>
     </div>
   );

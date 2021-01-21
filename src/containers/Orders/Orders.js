@@ -8,9 +8,10 @@ import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
 import * as actions from '../../store/actions/index';
 
 const Orders = (props) => {
+  const { token, userId, onFetchOrders } = props;
   useEffect(() => {
-    props.onFetchOrders(props.token, props.userId);
-  }, []);
+    onFetchOrders(token, userId);
+  }, [token, userId, onFetchOrders]);
 
   let orders = <Spinner />;
   if (!props.loading) {
