@@ -32,7 +32,7 @@ const Order = (props) => {
     <div className={styles.Order}>
       <p>Ingredients : {ingredientOutput}</p>
       <p>
-        Total Price : <strong>{props.price}</strong>
+        Total Price : <strong>₹{props.price}</strong>
       </p>
     </div>
   );
