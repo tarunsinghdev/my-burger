@@ -7,18 +7,22 @@
 
 An online burger store which lets you create and customize your personalized burger.
 
-## Features ⭐️
+## ⭐️ Features
 
 - Authentication
 - Customizable ingredients, dynamic price calculation.
 - Orders page for your order history.
 
-## Tech Stack 💻
+## 💻 Tech Stack
 
 - [React.js](https://reactjs.org/)
 - [Redux.js](https://redux.js.org/)
 
-## Screenshots
+## ✨ Working/Flow chart
+
+![BurgerBuilder](https://user-images.githubusercontent.com/25122604/118592230-45a6d800-b7c3-11eb-8449-d81fa350fd30.png)
+
+## 📷 Screenshots
 
 ### Home Page
 
